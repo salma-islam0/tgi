@@ -1,3 +1,5 @@
+
+
 /* Global roles */
 * {
     box-sizing: border-box;
@@ -1005,7 +1007,7 @@ button:hover {
 }
 @media (max-width:870px) {
     #blog {
-        padding: 20px;
+        padding:90px 20px;
     }
     #blog .content div {
         margin: 20px 0px;
@@ -1662,5 +1664,6 @@ button:hover {
 }
 /* Page End  */
 /* File End  */
+
 
 
