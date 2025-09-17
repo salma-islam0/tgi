@@ -30,3 +30,20 @@
   window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
 })();
+
+let menu = document.querySelector(".menu");
+let menulinks= document.querySelector(".menulinks");
+menu.addEventListener ('click', function() {
+  menulinks.style.opacity = 1;
+  menulinks.style.zIndex = 3;
+});
+
+
+
+
+menu.addEventListener('click', function() {
+  menulinks.classList.toggle("active");
+});
+
+
+
