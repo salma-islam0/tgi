@@ -134,6 +134,7 @@ a {
 /* Header Start  */
 .head {
     width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -594,9 +595,11 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-image: url(../imgs/download.jpeg);
+    background-attachment: fixed;
+
     background-size: cover;
     background-position: center;
     filter: blur(5px) brightness(30%);
@@ -824,10 +827,9 @@ time {
     font-family: "poppins";
 }
 #contact >div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 30px;
-    padding: 150px 30px 0 30px;
+    padding: 80px 30px 0 30px;
 }
 #contact .connect {
     padding: 30px;
@@ -855,7 +857,9 @@ time {
     align-items: center;
     margin-right: 60px;
     align-self: flex-start;
- }
+    font-size: 13px;
+    overflow-wrap: normal;
+}
 #contact .connect p span {
     color: var(--main2-color-purple);
     font-weight: bold;
@@ -867,6 +871,7 @@ time {
     padding: 10px;
     border-radius: 50%;
     margin-right: 10px;
+    font-size: 13px;
 }
 
 .form {
@@ -935,7 +940,7 @@ button:hover {
 }
 @media (max-width : 877px) {
     #contact >div {
-            grid-template-columns: 1fr ;
+        flex-direction: column;
     }
     #contact .connect {
         padding: 0 50px 10px;
@@ -950,6 +955,12 @@ button:hover {
         margin: 0;
         padding: 0 !important;
         width: 100%;
+    }
+    #contact .connect {
+        padding: 0 15px ;
+        text-align: start;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
     }
 }
 /* form :end */
@@ -1017,17 +1028,18 @@ button:hover {
         padding: 0;
     }
 }
-@media (max-width:870px) {
-    #blog {
-        padding: 30px;
-    }
-}
+
 @media (max-width:870px) {
     #blog {
         padding: 20px;
     }
     #blog .content div {
         margin: 20px 0px;
+    }
+}
+@media (max-width:500px) {
+    #blog {
+        padding: 50px;
     }
 }
 /* Blog end */
@@ -1245,6 +1257,12 @@ button:hover {
     z-index: -1;
     /* Put behind the text */
 }
+@media (max-width: 530px) {
+    #aa {
+        font-size: 20px !important;
+        padding: 50px;
+    }
+}
 
 /* Text End  */
 
@@ -1309,7 +1327,7 @@ button:hover {
 #work .content svg, 
 #work .first1 svg {
     display: inline-flex;
-    font-size: 30px;
+    font-size: 20px;
     z-index: 1;
     color: var(--main-color);
     padding: 0px 10px;
@@ -1324,7 +1342,7 @@ button:hover {
 #work .first1 h4 {
     margin: 0 0 10px 0;
     display: inline;
-    font-size: 30px;
+    font-size: 20px;
     font-family: "poppins";
 }
 
@@ -1372,6 +1390,12 @@ button:hover {
 @media (max-width: 1225px) {
     #work .content {
         flex-direction: column;
+    }
+}
+@media (max-width: 520px) {
+    #work .content p, #work .first1 p {
+        line-height: 1.3 !important; 
+        font-size: 17px !important;
     }
 }
 @keyframes rotate {
